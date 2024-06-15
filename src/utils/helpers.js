@@ -1,4 +1,5 @@
 import { images } from "../data/data-icons";
+import { timeZoneCityToCountry } from "../data/data_cities_to_countries";
 import { weekdays } from "../data/weekdays";
 
 export function customGetDay(dateInput) {
@@ -48,4 +49,23 @@ export function getWindDirection(degrees) {
   degrees = Math.round(degrees, 0);
   degrees = (degrees + 8) % 8;
   return directions[degrees];
+}
+
+export function getCapitalCityName() {
+  let userRegion;
+  let userCity;
+  let userCountry;
+  let userTimeZone;
+
+  if (Intl) {
+
+    userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    var tzArr = userTimeZone.split("/");
+    userRegion = tzArr[0];
+    userCity = tzArr[tzArr.length - 1];
+    userCountry = timeZoneCityToCountry[userCity];
+
+  }
+  return { userCity, userCountry, userRegion };
+
 }

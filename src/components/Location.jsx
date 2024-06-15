@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
-import styled from "styled-components";
-import { useLocation } from "../hooks/useLocation";
-import Loader from "../ui/Loader";
+import { useEffect, useState } from 'react';
+import styled from 'styled-components';
+import { useLocation } from '../hooks/useLocation';
+import Loader from '../ui/Loader';
 
 const StyledLocation = styled.div`
   max-width: 30vw;
@@ -40,13 +40,13 @@ const Time = styled.div`
   font-size: 1.875rem;
   font-weight: 900;
   letter-spacing: 4px;
-  font-family: "Architext";
+  font-family: 'Architext';
   margin: 0 10px 0;
 `;
 function Location() {
   const { isLoading, data } = useLocation();
-
   const [time, setTime] = useState(new Date());
+
   useEffect(() => {
     setInterval(() => {
       setTime(new Date());
@@ -66,7 +66,7 @@ function Location() {
         )}
       </Container>
       <Time>
-        {time.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
+        {time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
       </Time>
     </StyledLocation>
   );

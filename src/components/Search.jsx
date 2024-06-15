@@ -1,7 +1,8 @@
-import { useForm } from "react-hook-form";
-import styled from "styled-components";
-import { useUpdateWeather } from "../hooks/useWeather";
-import { useState } from "react";
+import { useForm } from 'react-hook-form';
+import styled from 'styled-components';
+import { useUpdateWeather } from '../hooks/useWeather';
+import { useEffect, useState } from 'react';
+import { getCapitalCityName } from '../utils/helpers';
 
 const Container = styled.div`
   display: flex;
@@ -35,7 +36,7 @@ const Input = styled.input`
   width: 100%;
   padding: 10px 80px 10px 10px;
 
-  font-family: "Architext";
+  font-family: 'Architext';
   font-size: 2rem;
   letter-spacing: 3px;
 
@@ -71,7 +72,7 @@ const ButtonSearch = styled.button`
   right: 0;
   transition: all 0.5s;
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     width: 30px;
     height: 30px;
@@ -119,11 +120,17 @@ const City = styled.h3`
   }
 `;
 function Search() {
-  const [city, setCity] = useState("");
+  const [city, setCity] = useState('');
+
   const { uploadNewWeather } = useUpdateWeather();
   const { register, handleSubmit, reset } = useForm({
-    defaultValues: "",
+    defaultValues: '',
   });
+  const [localData, setLocalData] = useState('');
+
+  useEffect(() => {
+    setLocalData(getCapitalCityName().userCity);
+  }, []);
   const handleChangeData = (data) => {
     uploadNewWeather(data.name);
     setCity(data.name);
@@ -134,15 +141,15 @@ function Search() {
       <Container>
         <Form onSubmit={handleSubmit(handleChangeData)}>
           <Input
-            type="text"
-            id="name"
-            placeholder="Enter the name of the city"
-            {...register("name")}
+            type='text'
+            id='name'
+            placeholder='Enter the city'
+            {...register('name')}
           />
-          <ButtonSearch type="submit" aria-label="Submit" />
+          <ButtonSearch type='submit' aria-label='Submit' />
         </Form>
       </Container>
-      <City>{city}</City>
+      <City>{city ? city : localData}</City>
     </>
   );
 }

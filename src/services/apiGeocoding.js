@@ -1,8 +1,9 @@
-
-function getPosition() {
-  return new Promise(function (resolve, reject) {
-    navigator.geolocation.getCurrentPosition(resolve, reject);
-  })
+export function getPosition() {
+  if (navigator.geolocation) {
+    return new Promise(function (resolve, reject) {
+      navigator.geolocation.getCurrentPosition(resolve, reject);
+    })
+  }
 }
 
 async function getAddress({ latitude, longitude }) {
@@ -24,3 +25,5 @@ export const getMyPosition = async function fetchAddress() {
   const address = { city: `${addressObj?.locality}`, country: `${addressObj?.countryName}`, latitude: `${addressObj?.latitude}`, longitude: `${addressObj?.longitude}` };
   return address;
 }
+
+
