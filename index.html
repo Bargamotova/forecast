@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/i_logo_bur.svg" />
+  <link rel="preload" as="image" type="image/svg+xml" href="/i_burger_logo.svg" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="This is weather forecast for a week web application with burger recept. Every day new recept of burger. Also this web application can give the forecast for another city" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="keywords" content="weather, forecast, burger, recept" />
+  <meta name="author" content="Anna Samoilenko / Bargamotova" />
+  <meta property="og:image" content="/_logo_bur.svg">
+  <meta name="title" content="Weather Burger">
+  <title>Weather Burger</title>
+  <style>
+    #loading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+      height: 100vh;
+      background: #1f2738;
+      margin: -8px;
+      padding: 0;
+      text-align: center;
+      position: relative;
+    }
+
+    .loading_text {
+      font-size: 5vw;
+      line-height: 64px;
+      letter-spacing: 10px;
+      margin-bottom: 32px;
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .loading_character {
+      animation: moveLetters 2.4s infinite ease-in-out;
+      transform: translateX(0);
+      position: relative;
+      display: inline-block;
+      text-shadow: 0px 2px 10px rgba(46, 74, 81, 0.3);
+      color: #fff0b1;
+      font-size: 2rem;
+      font-family: "Architext", sans-serif;
+      animation: wave 0.7s infinite alternate;
+    }
+
+    .loading_character:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+
+    .loading_character:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .loading_character:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+
+    .loading_character:nth-child(4) {
+      animation-delay: 0.4s;
+    }
+
+    .loading_character:nth-child(5) {
+      animation-delay: 0.5s;
+    }
+
+    .loading_character:nth-child(6) {
+      animation-delay: 0.6s;
+    }
+
+    .loading_character:nth-child(7) {
+      animation-delay: 0.7s;
+    }
+
+    @keyframes wave {
+      from {
+        transform: translateY(-9px);
+      }
+
+      to {
+        transform: translateY(9px);
+      }
+    }
+
+    #burger {
+      margin: 0;
+      position: relative;
+      top: -30px;
+      color: #fff;
+      font-weight: bold;
+      overflow: clip;
+    }
+  </style>
+  <script type="module" crossorigin src="/assets/js/index-BaKFy1Nx.js"></script>
+</head>
+
+<body>
+  <div id="root">
+    <div id="loading">
+      <img id="burger" src="/i_burger_logo.svg" width="300px" height="auto" alt="the bird is flying" />
+      <div class="loading_text">
+        <span class="loading_character">L</span>
+        <span class="loading_character">O</span>
+        <span class="loading_character">A</span>
+        <span class="loading_character">D</span>
+        <span class="loading_character">I</span>
+        <span class="loading_character">N</span>
+        <span class="loading_character">G</span>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
