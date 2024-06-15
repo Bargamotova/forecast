@@ -126,10 +126,10 @@ function Search() {
   const { register, handleSubmit, reset } = useForm({
     defaultValues: '',
   });
-  const [localData, setLocalData] = useState('');
+  const [localData, setLocalData] = useState({});
 
   useEffect(() => {
-    setLocalData(getCapitalCityName().userCity);
+    setLocalData(getCapitalCityName());
   }, []);
   const handleChangeData = (data) => {
     uploadNewWeather(data.name);
@@ -149,7 +149,10 @@ function Search() {
           <ButtonSearch type='submit' aria-label='Submit' />
         </Form>
       </Container>
-      <City>{city ? city : localData}</City>
+      <City>{city}</City>
+      <City>
+        {localData.userCity}/{localData.userRegion}
+      </City>
     </>
   );
 }
