@@ -1,7 +1,7 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 const Heading = styled.h1`
   ${(props) =>
-    props.as === "h1" &&
+    props.as === 'h1' &&
     css`
       font-size: 5vmin;
       margin: 0;
@@ -12,7 +12,7 @@ const Heading = styled.h1`
       }
     `}
   ${(props) =>
-    props.as === "h2" &&
+    props.as === 'h2' &&
     css`
       margin: 0;
       font-size: 2rem;
@@ -22,7 +22,7 @@ const Heading = styled.h1`
       }
     `}
     ${(props) =>
-    props.as === "h3" &&
+    props.as === 'h3' &&
     css`
       margin: 0;
       font-weight: 600;
@@ -32,7 +32,7 @@ const Heading = styled.h1`
       }
     `}
     ${(props) =>
-    props.as === "h4" &&
+    props.as === 'h4' &&
     css`
       line-height: 1;
       margin: 0;
@@ -42,7 +42,7 @@ const Heading = styled.h1`
       }
     `}
     ${(props) =>
-    props.type === "bg" &&
+    props.$type === 'bg' &&
     css`
       background-image: var(--gradient_two_clr);
       border: var(--border-thin);
@@ -53,8 +53,8 @@ const Heading = styled.h1`
       box-shadow: 0 0 5px var(--gray-dark);
     `}
     font-family: ${(props) =>
-    props.$secondary ? "Architext" : "SnellRoundhand"};
+    props.$secondary ? 'Architext' : 'SnellRoundhand'};
 
-  color: ${(props) => (props.$dark ? "var(--gray-dark)" : "var(--gray-light)")};
+  color: ${(props) => (props.$dark ? 'var(--gray-dark)' : 'var(--gray-light)')};
 `;
 export default Heading;

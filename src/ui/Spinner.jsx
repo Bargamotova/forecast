@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import wind from "./../assets/windy.svg";
-import Inner from "./Inner";
+import styled from 'styled-components';
+import wind from './../assets/windy.svg';
+import Inner from './Inner';
 
 const Image = styled.img`
   position: absolute;
@@ -13,7 +13,7 @@ const Image = styled.img`
 function Spinner({ w, h }) {
   return (
     <Inner $width={w} $height={h}>
-      <Image src={wind} />
+      <Image src={wind} alt='the wind' />
     </Inner>
   );
 }

@@ -1,16 +1,16 @@
-import styled from "styled-components";
-import { useBurger } from "../hooks/useBurgers";
-import { useState } from "react";
-import burgerImg from "../assets/icons/i_burger.svg";
-import noicy from "../assets/icons/noise.svg";
+import styled from 'styled-components';
+import { useBurger } from '../hooks/useBurgers';
+import { useState } from 'react';
+import burgerImg from '../assets/icons/i_burger.svg';
+import noicy from '../assets/icons/noise.svg';
 
-import Button from "../ui/Button";
-import Heading from "../ui/Heading";
-import Ingredient from "./Ingredient";
-import LinkTo from "../ui/LinkTo";
-import Image from "../ui/Image";
-import List from "../ui/List";
-import TextLoader from "../ui/TextLoader";
+import Button from '../ui/Button';
+import Heading from '../ui/Heading';
+import Ingredient from './Ingredient';
+import LinkTo from '../ui/LinkTo';
+import Image from '../ui/Image';
+import List from '../ui/List';
+import TextLoader from '../ui/TextLoader';
 
 const StyledBurger = styled.div`
   width: 100%;
@@ -39,8 +39,12 @@ const StyledBurger = styled.div`
     margin-bottom: 20px;
   }
   & h3:first-child {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
+  & h4 {
+    margin-bottom: 10px;
+  }
+
   & button {
     margin-top: 30px;
   }
@@ -84,7 +88,7 @@ const ImageBox = styled.div`
   aspect-ratio: 2 / 1.5;
   transition: transform 0.3s;
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     inset: 0;
     mask: url(${noicy});
@@ -107,10 +111,13 @@ function Burger() {
   };
   return (
     <StyledBurger>
-      <Heading as="h2">Get Burger of the Day</Heading>
+      <Heading as='h2'>Get Burger of the Day</Heading>
       <Container>
-        <Heading as="h3" type="bg">
-          {!data ? <TextLoader size="2rem" /> : data?.title}
+        <Heading as='h3' $type='bg'>
+          {!data ? <TextLoader size='2rem' /> : data?.title}
+        </Heading>
+        <Heading as='h4' $type='bg' $secondary>
+          Servings for {data?.servings} persons
         </Heading>
         <Inner>
           <ImageBox style={{ transform: `translateY(${!open ? 105 : 0}%)` }}>
@@ -118,29 +125,26 @@ function Burger() {
               $burger
               src={isLoading || !data ? burgerImg : data?.image_url}
               alt={data?.title}
-              width="5vmin"
-              loading="lazy"
+              width='5vmin'
+              loading='lazy'
             />
           </ImageBox>
+
           <List
             $vertical
             style={{ transform: `translateY(${open ? 0 : -100}%)` }}
           >
-            <Heading as="h3" type="bg" $secondary>
-              Servings for {data?.servings} persons
-            </Heading>
             {ingredients?.map((el, i) => (
               <Ingredient {...el} key={i} />
             ))}
-
-            <LinkTo href={data?.source_url} target="_blank">
-              How to cook source: <span>&quot;{data?.publisher}&quot</span>
-            </LinkTo>
           </List>
         </Inner>
+        <LinkTo href={data?.source_url} target='_blank'>
+          How to cook source: <span>&quot;{data?.publisher}&quot</span>
+        </LinkTo>
       </Container>
       <Button onClick={handleClick}>
-        {open ? "Open recipe" : "Close recipe"}
+        {open ? 'Open recipe' : 'Close recipe'}
       </Button>
     </StyledBurger>
   );
