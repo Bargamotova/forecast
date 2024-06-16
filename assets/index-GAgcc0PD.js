@@ -144,7 +144,7 @@ Error generating stack: `+s.message+`
         font-size: 1rem;
       }
     `}
-    ${e=>e.type==="bg"&&At`
+    ${e=>e.$type==="bg"&&At`
       background-image: var(--gradient_two_clr);
       border: var(--border-thin);
       box-sizing: content-box;
@@ -452,7 +452,7 @@ to {
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-`;function Ew({w:e,h:t}){return w.jsx(Aw,{$width:e,$height:t,children:w.jsx(_w,{src:Cw})})}const Pw=I.div`
+`;function Ew({w:e,h:t}){return w.jsx(Aw,{$width:e,$height:t,children:w.jsx(_w,{src:Cw,alt:"the wind"})})}const Pw=I.div`
   width: 100%;
   height: auto;
   display: grid;
@@ -716,8 +716,12 @@ to {
     margin-bottom: 20px;
   }
   & h3:first-child {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
+  & h4 {
+    margin-bottom: 10px;
+  }
+
   & button {
     margin-top: 30px;
   }
@@ -758,7 +762,7 @@ to {
   aspect-ratio: 2 / 1.5;
   transition: transform 0.3s;
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     inset: 0;
     mask: url(${Wf});
@@ -768,7 +772,7 @@ to {
   @media only screen and (max-width: 64rem) {
     aspect-ratio: unset;
   }
-`;function Kw(){const[e,t]=U.useState(!0),{isLoading:n,data:r}=Iw(),{ingredients:i}=r||[],s=o=>{o.preventDefault(),t(a=>!a)};return w.jsxs(Vw,{children:[w.jsx(Oe,{as:"h2",children:"Get Burger of the Day"}),w.jsxs(Qw,{children:[w.jsx(Oe,{as:"h3",type:"bg",children:r?r==null?void 0:r.title:w.jsx(Jc,{size:"2rem"})}),w.jsxs(Ww,{children:[w.jsx(Hw,{style:{transform:`translateY(${e?0:105}%)`},children:w.jsx(jr,{$burger:!0,src:n||!r?$w:r==null?void 0:r.image_url,alt:r==null?void 0:r.title,width:"5vmin",loading:"lazy"})}),w.jsxs(Ey,{$vertical:!0,style:{transform:`translateY(${e?0:-100}%)`},children:[w.jsxs(Oe,{as:"h3",type:"bg",$secondary:!0,children:["Servings for ",r==null?void 0:r.servings," persons"]}),i==null?void 0:i.map((o,a)=>U.createElement(Bw,{...o,key:a})),w.jsxs(Uw,{href:r==null?void 0:r.source_url,target:"_blank",children:["How to cook source: ",w.jsxs("span",{children:['"',r==null?void 0:r.publisher,"&quot"]})]})]})]})]}),w.jsx(Lw,{onClick:s,children:e?"Open recipe":"Close recipe"})]})}const Gw=I.div`
+`;function Kw(){const[e,t]=U.useState(!0),{isLoading:n,data:r}=Iw(),{ingredients:i}=r||[],s=o=>{o.preventDefault(),t(a=>!a)};return w.jsxs(Vw,{children:[w.jsx(Oe,{as:"h2",children:"Get Burger of the Day"}),w.jsxs(Qw,{children:[w.jsx(Oe,{as:"h3",$type:"bg",children:r?r==null?void 0:r.title:w.jsx(Jc,{size:"2rem"})}),w.jsxs(Oe,{as:"h4",$type:"bg",$secondary:!0,children:["Servings for ",r==null?void 0:r.servings," persons"]}),w.jsxs(Ww,{children:[w.jsx(Hw,{style:{transform:`translateY(${e?0:105}%)`},children:w.jsx(jr,{$burger:!0,src:n||!r?$w:r==null?void 0:r.image_url,alt:r==null?void 0:r.title,width:"5vmin",loading:"lazy"})}),w.jsx(Ey,{$vertical:!0,style:{transform:`translateY(${e?0:-100}%)`},children:i==null?void 0:i.map((o,a)=>U.createElement(Bw,{...o,key:a}))})]}),w.jsxs(Uw,{href:r==null?void 0:r.source_url,target:"_blank",children:["How to cook source: ",w.jsxs("span",{children:['"',r==null?void 0:r.publisher,"&quot"]})]})]}),w.jsx(Lw,{onClick:s,children:e?"Open recipe":"Close recipe"})]})}const Gw=I.div`
   display: flex;
   flex-direction: column;
   padding: 0 20px;
