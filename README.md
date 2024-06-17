@@ -1,8 +1,17 @@
-# React + Vite
+# Project Weather Forecast Burger <img align="center" alt="sign" width="100" style="padding-left:10px" src="/src/assets/icons/i_burger_logo.svg" title="burger logo"/>  
+`Link : ` https://bargamotova.github.io/forecast/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### This is weather forecast for a week, web application with burger recipe. 
+### Every day new recipe of burger. 
+### Also this web application can give the forecast for another city.
 
-Currently, two official plugins are available:
+<img align="center" src="https://bargamotova.github.io/forecast/forecast_.png" alt="forecast web app"/>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+_`The app was created by technologies :`_
+- React <img align="center" style="padding-left:10px" width="24" src="https://github.com/Bargamotova/Bargamotova/blob/main/icons/react.svg" alt="react"/>
+- React hook form <img align="center" style="padding-left:10px" width="24" src="https://github.com/Bargamotova/Bargamotova/blob/main/icons/react-hook.svg" alt="form"/>
+- Tanstack Query <img align="center" style="padding-left:10px" width="24" src="https://github.com/Bargamotova/Bargamotova/blob/main/icons/react-query.svg" alt="query"/>
+- Styled Components <img align="center" style="padding-left:10px" width="24" src="https://github.com/Bargamotova/Bargamotova/blob/main/icons/styled.svg" alt="styled"/>
+- Custom Icons for UI design 
+  
+
