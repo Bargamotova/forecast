@@ -3,7 +3,7 @@
 ### This is weather forecast for a week, web application with burger recipe. 
 ### Every day new recipe of burger. 
 ### Also this web application can give the forecast for another city.
-`Link : ` https://bargamotova.github.io/forecast/ {:target="_blank"}
+[Link : Weather Burger ](https://bargamotova.github.io/forecast/){:target="_blank"}
 
 <img align="center" src="https://bargamotova.github.io/forecast/forecast_.png" alt="forecast web app"/>
 
