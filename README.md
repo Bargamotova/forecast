@@ -6,10 +6,10 @@
 <img align="center" src="https://bargamotova.github.io/forecast/forecast_.png" alt="forecast web app"/>
 
 _`Technology in this project :`_
-- React <img align="" style="padding-left:10px" width="24" src="https://github.com/Bargamotova/Bargamotova/blob/main/icons/react.svg" alt="react"/>
-- React hook form <img align="" style="padding-left:10px" width="24" src="https://github.com/Bargamotova/Bargamotova/blob/main/icons/react-hook.svg" alt="form"/>
-- Tanstack Query <img align="" style="padding-left:10px" width="24" src="https://github.com/Bargamotova/Bargamotova/blob/main/icons/react-query.svg" alt="query"/>
-- Styled Components <img align="" style="padding-left:10px" width="24" src="https://github.com/Bargamotova/Bargamotova/blob/main/icons/styled.svg" alt="styled"/>
+- React <img align="center" style="padding-left:10px" width="24" src="https://github.com/Bargamotova/Bargamotova/blob/main/icons/react.svg" alt="react"/>
+- React hook form <img align="center" style="padding-left:10px" width="24" src="https://github.com/Bargamotova/Bargamotova/blob/main/icons/react-hook.svg" alt="form"/>
+- Tanstack Query <img align="center" style="padding-left:10px" width="24" src="https://github.com/Bargamotova/Bargamotova/blob/main/icons/react-query.svg" alt="query"/>
+- Styled Components <img align="center" style="padding-left:10px" width="24" src="https://github.com/Bargamotova/Bargamotova/blob/main/icons/styled.svg" alt="styled"/>
 - Custom Icons for UI design 
   
 
