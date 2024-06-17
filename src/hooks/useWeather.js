@@ -27,7 +27,7 @@ export function useUpdateWeather() {
         return { ...data }
       })
     },
-    onError: () => toast.error('There was an error while get city location on incorrect name of the city')
+    onError: () => toast.error('There was an error, an incorrect name of the city. Please, try again')
   });
 
   return { isLoading, uploadNewWeather };

@@ -10,7 +10,8 @@ const GlobalStyles = createGlobalStyle`
 
   --gray-light: #f5e9e9;
   --gray-dark: #4b4b4b;
-
+  --accent: tomato;
+  
   --grad_purple: rgba(126, 85, 244, 0.3);
  --grad_blue: #0687f2;
  --grad_yellow: rgba(242, 154, 6, 0.5); 

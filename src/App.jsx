@@ -1,10 +1,10 @@
-import Aside from "./components/Aside";
-import Main from "./components/Main";
-import styled from "styled-components";
-import GlobalStyles from "./styles/GlobalStyles";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import { Toaster } from "react-hot-toast";
+import Aside from './components/Aside';
+import Main from './components/Main';
+import styled from 'styled-components';
+import GlobalStyles from './styles/GlobalStyles';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import { Toaster } from 'react-hot-toast';
 
 const Wrapper = styled.div`
   display: grid;
@@ -33,25 +33,23 @@ function App() {
           <Main />
         </Wrapper>
         <Toaster
-          position="top-center"
-          gutter={12}
-          containerStyle={{ margin: "8px" }}
+          position='top-center'
+          gutter={15}
+          containerStyle={{ margin: '8px' }}
           toastOptions={{
-            success: {
-              duration: 3000,
-              style: { background: "var(--accent)" },
-            },
             error: {
               duration: 5000,
               style: {
-                background: "var(--accent)",
+                background: 'var(--accent)',
               },
             },
             style: {
-              fontSize: "16px",
-              maxWidth: "500px",
-              padding: "16px 24px",
-              color: "var(--gray-light)",
+              fontSize: '18px',
+              fontWeight: '600',
+              textTransform: 'uppercase',
+              maxWidth: '500px',
+              padding: '16px 24px',
+              color: 'var(--mint)',
             },
           }}
         />
