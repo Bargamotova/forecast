@@ -4,10 +4,10 @@
 <img align="center" src="https://bargamotova.github.io/forecast/forecast_.png"/>
 
 _Technology in this project :_
-- React
-- React hook form 
-- Tanstack Query
-- Styled Components
-- Custom Icons
+- React <img align="" src="https://github.com/Bargamotova/Bargamotova/blob/main/icons/react.svg"/>
+- React hook form <img align="" src="https://github.com/Bargamotova/Bargamotova/blob/main/icons/react-hook.svg"/>
+- Tanstack Query <img align="" src="https://github.com/Bargamotova/Bargamotova/blob/main/icons/react-query.svg"/>
+- Styled Components <img align="" src="https://github.com/Bargamotova/Bargamotova/blob/main/icons/styled.svg"/>
+- Custom Icons for UI design 
   
 
