@@ -350,7 +350,7 @@ to {
   > * {
     pointer-events: auto;
   }
-`,po=16,fw=({reverseOrder:e,position:t="top-center",toastOptions:n,gutter:r,children:i,containerStyle:s,containerClassName:o})=>{let{toasts:a,handlers:l}=bx(n);return U.createElement("div",{style:{position:"fixed",zIndex:9999,top:po,left:po,right:po,bottom:po,pointerEvents:"none",...s},className:o,onMouseEnter:l.startPause,onMouseLeave:l.endPause},a.map(u=>{let m=u.position||t,d=l.calculateOffset(u,{reverseOrder:e,gutter:r,defaultPosition:t}),f=cw(m,d);return U.createElement(uw,{id:u.id,key:u.id,onHeightUpdate:l.updateHeight,className:u.visible?dw:"",style:f},u.type==="custom"?pa(u.message,u):i?i(u):U.createElement(lw,{toast:u,position:m}))}))},pw=ft;function Zc(){const{isLoading:e,data:t}=Xc({queryKey:["weather"],queryFn:()=>Sy()});return{weather:t,isWeatherDataLoading:e}}function hw(){const e=Yc(),{isLoading:t,mutate:n}=gx({queryKey:["weather"],mutationFn:r=>Sy(r),onSuccess:r=>{e.setQueryData(["weather"],i=>r===null?{...r}:{...r})},onError:()=>pw.error("There was an error while get city location on incorrect name of the city")});return{isLoading:t,uploadNewWeather:n}}const mw="/forecast/assets/images/rise.svg",yw="/forecast/assets/images/down.svg",gw="/forecast/assets/images/wind_bind.svg",jr=I.img`
+`,po=16,fw=({reverseOrder:e,position:t="top-center",toastOptions:n,gutter:r,children:i,containerStyle:s,containerClassName:o})=>{let{toasts:a,handlers:l}=bx(n);return U.createElement("div",{style:{position:"fixed",zIndex:9999,top:po,left:po,right:po,bottom:po,pointerEvents:"none",...s},className:o,onMouseEnter:l.startPause,onMouseLeave:l.endPause},a.map(u=>{let m=u.position||t,d=l.calculateOffset(u,{reverseOrder:e,gutter:r,defaultPosition:t}),f=cw(m,d);return U.createElement(uw,{id:u.id,key:u.id,onHeightUpdate:l.updateHeight,className:u.visible?dw:"",style:f},u.type==="custom"?pa(u.message,u):i?i(u):U.createElement(lw,{toast:u,position:m}))}))},pw=ft;function Zc(){const{isLoading:e,data:t}=Xc({queryKey:["weather"],queryFn:()=>Sy()});return{weather:t,isWeatherDataLoading:e}}function hw(){const e=Yc(),{isLoading:t,mutate:n}=gx({queryKey:["weather"],mutationFn:r=>Sy(r),onSuccess:r=>{e.setQueryData(["weather"],i=>r===null?{...r}:{...r})},onError:()=>pw.error("There was an error, an incorrect name of the city. Please, try again")});return{isLoading:t,uploadNewWeather:n}}const mw="/forecast/assets/images/rise.svg",yw="/forecast/assets/images/down.svg",gw="/forecast/assets/images/wind_bind.svg",jr=I.img`
   ${e=>e.$big_icon&&At`
       width: 20vmin;
       height: auto;
@@ -1262,7 +1262,8 @@ to {
 
   --gray-light: #f5e9e9;
   --gray-dark: #4b4b4b;
-
+  --accent: tomato;
+  
   --grad_purple: rgba(126, 85, 244, 0.3);
  --grad_blue: #0687f2;
  --grad_yellow: rgba(242, 154, 6, 0.5); 
@@ -1358,4 +1359,4 @@ body&::after {
   @media only screen and (max-width: 1366px) {
     display: block;
   }
-`,ek=new J1({defaultOptions:{queries:{staleTime:0}}});function tk(){return w.jsx(w.Fragment,{children:w.jsxs(ix,{client:ek,children:[w.jsx(ZS,{initialIsOpen:!1}),w.jsx(XS,{}),w.jsxs(JS,{children:[w.jsx(w1,{}),w.jsx(HS,{})]}),w.jsx(fw,{position:"top-center",gutter:12,containerStyle:{margin:"8px"},toastOptions:{success:{duration:3e3,style:{background:"var(--accent)"}},error:{duration:5e3,style:{background:"var(--accent)"}},style:{fontSize:"16px",maxWidth:"500px",padding:"16px 24px",color:"var(--gray-light)"}}})]})})}Tl.createRoot(document.getElementById("root")).render(w.jsx(me.StrictMode,{children:w.jsx(tk,{})}));
+`,ek=new J1({defaultOptions:{queries:{staleTime:0}}});function tk(){return w.jsx(w.Fragment,{children:w.jsxs(ix,{client:ek,children:[w.jsx(ZS,{initialIsOpen:!1}),w.jsx(XS,{}),w.jsxs(JS,{children:[w.jsx(w1,{}),w.jsx(HS,{})]}),w.jsx(fw,{position:"top-center",gutter:15,containerStyle:{margin:"8px"},toastOptions:{error:{duration:5e3,style:{background:"var(--accent)"}},style:{fontSize:"18px",fontWeight:"600",textTransform:"uppercase",maxWidth:"500px",padding:"16px 24px",color:"var(--mint)"}}})]})})}Tl.createRoot(document.getElementById("root")).render(w.jsx(me.StrictMode,{children:w.jsx(tk,{})}));
