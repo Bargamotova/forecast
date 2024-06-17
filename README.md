@@ -1,4 +1,5 @@
-# Project Weather Forecast Burger 
+# Project Weather Forecast Burger  
+<img align="center" alt="sign" width="24" style="padding-right:10px" src="/src/assets/icons/i_burger_logo.svg" title="burger logo"/> 
 `Link : ` https://bargamotova.github.io/forecast/
 
 ## This is weather forecast for a week web application with burger recipe. Every day new recipe of burger. 
